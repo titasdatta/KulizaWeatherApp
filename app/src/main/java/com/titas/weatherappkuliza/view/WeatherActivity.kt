@@ -19,13 +19,5 @@ class WeatherActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_weather)
 
-        test_button.setOnClickListener {
-            weatherResponseLiveData = WeatherRepository.getWeatherData(Constants.API_KEY, "bengaluru", 7)
-            weatherResponseLiveData.observe(this, object : Observer<WeatherResponse> {
-                override fun onChanged(t: WeatherResponse?) {
-                    Log.d("Weather", "Weather Response : ${t.toString()}")
-                }
-            })
-        }
     }
 }
