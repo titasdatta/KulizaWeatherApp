@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/row_item_height"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="@dimen/padding_twenty"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="@dimen/day_text_size"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        tools:text="Today"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/condition_icon"
+            android:layout_width="@dimen/padding_twenty_five"
+            android:layout_height="@dimen/padding_twenty_five"
+            tools:src="@drawable/clouds"
+            android:layout_gravity="center_vertical"/>
+        <TextView
+            android:id="@+id/condition_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/day_text_size"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginLeft="@dimen/padding_ten"
+            android:textColor="@color/grey"
+            tools:text="Clear"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/max_min_temp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
+        android:textSize="@dimen/day_text_size"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/grey"
+        android:gravity="center"
+        tools:text="26\u00B0/30\u00B0"
+        />
+
+
+</LinearLayout>

@@ -24,7 +24,7 @@ object WeatherRepository {
             }
 
             override fun onResponse(call: Call<WeatherResponse>?, response: Response<WeatherResponse>?) {
-                weatherResponseData.value = response?.body()
+                weatherResponseData.postValue(response?.body())
             }
         })
 

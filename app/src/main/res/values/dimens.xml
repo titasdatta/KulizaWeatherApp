@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="error_image_size">100dp</dimen>
+    <dimen name="retry_btn_width">150dp</dimen>
+    <dimen name="retry_btn_margin_top">20dp</dimen>
+    <dimen name="retry_btn_text_size">20sp</dimen>
+    <dimen name="row_item_height">75dp</dimen>
+    <dimen name="padding_thirty">30dp</dimen>
+    <dimen name="padding_twenty">20dp</dimen>
+    <dimen name="day_text_size">16sp</dimen>
+    <dimen name="padding_twenty_five">25dp</dimen>
+    <dimen name="padding_ten">10dp</dimen>
+</resources>
