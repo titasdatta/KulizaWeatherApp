@@ -1,6 +1,7 @@
 package com.titas.weatherappkuliza.adapter
 
 import android.support.v7.widget.RecyclerView
+import android.text.Html
 import android.text.format.DateUtils
 import android.view.View
 import android.view.ViewGroup
@@ -27,7 +28,7 @@ class ForecastListAdapter(private val forecastList: ArrayList<WeatherForecast>):
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ForecastListViewHolder {
-        val rowView = parent?.inflate(R.layout.forecast_row_item, false)
+        val rowView = parent.inflate(R.layout.forecast_row_item, false)
         return ForecastListViewHolder(rowView)
     }
 
@@ -40,7 +41,8 @@ class ForecastListAdapter(private val forecastList: ArrayList<WeatherForecast>):
         fun bind(forecast: WeatherForecast){
             this.forecast = forecast
             mView.condition_icon.load("https:${forecast.day.condition.iconLink}")
-            mView.max_min_temp.text = "${forecast.day.minTemp}\\u00B0/${forecast.day.maxTemp}\\u00B0"
+            val max_min_temp = "${forecast.day.minTemp}"+"°"+"/"+"${forecast.day.maxTemp}"+"°"
+            mView.max_min_temp.text = Html.fromHtml(max_min_temp)
             mView.condition_text.text = forecast.day.condition.conditionText.getWeatherCondition()
             mView.date.text = forecast.forecastDate.getFormattedDate()
         }

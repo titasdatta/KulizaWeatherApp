@@ -31,8 +31,32 @@ data class Location(@SerializedName("name") val cityName: String) : Parcelable {
     }
 }
 
-data class Condition(@SerializedName("conditionText") val conditionText: String,
-                     @SerializedName("iconLink") val iconLink: String) : Parcelable {
+data class Current(@SerializedName("temp_c")val temp: Float): Parcelable{
+    constructor(parcel: Parcel) : this(parcel.readFloat()) {
+    }
+
+    override fun writeToParcel(parcel: Parcel, flags: Int) {
+        parcel.writeFloat(temp)
+    }
+
+    override fun describeContents(): Int {
+        return 0
+    }
+
+    companion object CREATOR : Parcelable.Creator<Current> {
+        override fun createFromParcel(parcel: Parcel): Current {
+            return Current(parcel)
+        }
+
+        override fun newArray(size: Int): Array<Current?> {
+            return arrayOfNulls(size)
+        }
+    }
+
+}
+
+data class Condition(@SerializedName("text") val conditionText: String,
+                     @SerializedName("icon") val iconLink: String) : Parcelable {
     constructor(parcel: Parcel) : this(
             parcel.readString(),
             parcel.readString()) {
@@ -162,16 +186,19 @@ data class Error(@SerializedName("message") val errorMessage: String) : Parcelab
 }
 
 data class WeatherResponse(@SerializedName("location") val location:Location,
+                           @SerializedName("current") val current: Current,
                            @SerializedName("forecast") val forecast: Forecast,
                            @SerializedName("error") val error: Error) : Parcelable {
     constructor(parcel: Parcel) : this(
             parcel.readParcelable(Location::class.java.classLoader),
             parcel.readParcelable(Forecast::class.java.classLoader),
-            parcel.readParcelable(Error::class.java.classLoader)) {
+            parcel.readParcelable(Error::class.java.classLoader),
+            parcel.readParcelable(Current::class.java.classLoader)) {
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeParcelable(location, flags)
+        parcel.writeParcelable(current, flags)
         parcel.writeParcelable(forecast, flags)
         parcel.writeParcelable(error, flags)
     }

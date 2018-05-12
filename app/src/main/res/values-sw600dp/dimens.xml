@@ -10,4 +10,5 @@
     <dimen name="day_text_size">24sp</dimen>
     <dimen name="padding_twenty_five">37dp</dimen>
     <dimen name="padding_ten">15dp</dimen>
+    <dimen name="padding_five">7dp</dimen>
 </resources>
