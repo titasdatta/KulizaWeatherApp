@@ -7,23 +7,24 @@ import android.view.View
 import android.view.ViewGroup
 import com.squareup.picasso.Picasso
 import com.titas.weatherappkuliza.R
-import com.titas.weatherappkuliza.common.getFormattedDate
-import com.titas.weatherappkuliza.common.getWeatherCondition
+import com.titas.weatherappkuliza.common.Utils
 import com.titas.weatherappkuliza.common.inflate
 import com.titas.weatherappkuliza.common.load
 import com.titas.weatherappkuliza.model.WeatherForecast
 import kotlinx.android.synthetic.main.forecast_row_item.view.*
+import javax.inject.Inject
 
 
 /**
  * Created by Titas on 5/12/2018.
  */
-class ForecastListAdapter(private val forecastList: ArrayList<WeatherForecast>): RecyclerView.Adapter<ForecastListAdapter.ForecastListViewHolder>() {
+class ForecastListAdapter @Inject constructor(private val forecastList: ArrayList<WeatherForecast>,
+                                              val utils: Utils): RecyclerView.Adapter<ForecastListAdapter.ForecastListViewHolder>() {
 
     override fun onBindViewHolder(holder: ForecastListViewHolder?, position: Int) {
         val forecast = forecastList[position]
         holder?.let {
-            holder.bind(forecast)
+            holder.bind(forecast, utils)
         }
     }
 
@@ -38,13 +39,13 @@ class ForecastListAdapter(private val forecastList: ArrayList<WeatherForecast>):
         private var mView: View = view
         private var forecast: WeatherForecast? = null
 
-        fun bind(forecast: WeatherForecast){
+        fun bind(forecast: WeatherForecast, utils: Utils){
             this.forecast = forecast
             mView.condition_icon.load("https:${forecast.day.condition.iconLink}")
             val max_min_temp = "${forecast.day.minTemp}"+"°"+"/"+"${forecast.day.maxTemp}"+"°"
             mView.max_min_temp.text = Html.fromHtml(max_min_temp)
-            mView.condition_text.text = forecast.day.condition.conditionText.getWeatherCondition()
-            mView.date.text = forecast.forecastDate.getFormattedDate()
+            mView.condition_text.text = utils.getWeatherCondition(forecast.day.condition.conditionText)
+            mView.date.text = utils.getFormattedDateFor(forecast.forecastDate)
         }
     }
 }

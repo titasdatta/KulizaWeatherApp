@@ -3,39 +3,43 @@ package com.titas.weatherappkuliza.view
 import android.animation.Animator
 import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.Observer
+import android.arch.lifecycle.ViewModelProvider
 import android.arch.lifecycle.ViewModelProviders
-import android.opengl.Visibility
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
-import android.util.Log
 import android.view.View
 import android.view.animation.AccelerateDecelerateInterpolator
 import android.view.animation.TranslateAnimation
 import com.titas.weatherappkuliza.R
 import com.titas.weatherappkuliza.adapter.ForecastListAdapter
-import com.titas.weatherappkuliza.common.Constants
+import com.titas.weatherappkuliza.common.Utils
+import com.titas.weatherappkuliza.dagger.WeatherApplication
 import com.titas.weatherappkuliza.model.ForecastWrapper
 import com.titas.weatherappkuliza.model.StatusCode
-import com.titas.weatherappkuliza.model.WeatherResponse
-import com.titas.weatherappkuliza.repository.WeatherRepository
 import com.titas.weatherappkuliza.viewmodel.ForecastListViewModel
+import dagger.android.AndroidInjection
 import kotlinx.android.synthetic.main.activity_weather.*
+import javax.inject.Inject
 
 class WeatherActivity : AppCompatActivity() {
 
     lateinit var weatherResponseLiveData : LiveData<ForecastWrapper>
-    lateinit var forecastViewModel: ForecastListViewModel
     lateinit var forecastListAdapter: ForecastListAdapter
+    lateinit var forecastViewModel: ForecastListViewModel
+    @Inject
+    lateinit var utils: Utils
+    @Inject
+    lateinit var viewModelFactory: ViewModelProvider.Factory
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        (application as WeatherApplication).component.inject(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_weather)
         title = "Kuliza Weather App"
 
-        forecastViewModel = ViewModelProviders.of(this).get(ForecastListViewModel::class.java)
+        forecastViewModel = ViewModelProviders.of(this, viewModelFactory).get(ForecastListViewModel::class.java)
 
         weatherResponseLiveData = forecastViewModel.getWeather("Bengaluru")
 
@@ -93,7 +97,7 @@ class WeatherActivity : AppCompatActivity() {
             val currentTemp = "${forecastData.currentTemp}" + "\u00B0"
             current_temp.text = "${currentTemp}"
             current_location.text = "${forecastData.city}"
-            forecastListAdapter = ForecastListAdapter(forecastData.forecastList)
+            forecastListAdapter = ForecastListAdapter(forecastData.forecastList, utils)
             forecast_list.adapter = forecastListAdapter
             success_path_container.visibility = View.VISIBLE
             forecast_list.visibility = View.INVISIBLE
