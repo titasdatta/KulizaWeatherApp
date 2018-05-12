@@ -15,27 +15,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f38c6d1-56c1-46aa-98c1-3ab5ecbd5769" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/res/mipmap-anydpi-v26/app_icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/res/mipmap-hdpi/app_icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/res/mipmap-mdpi/app_icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/res/mipmap-xhdpi/app_icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/res/mipmap-xxhdpi/app_icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/res/mipmap-xxxhdpi/app_icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/titas/weatherappkuliza/model/ForecastWrapper.kt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/titas/weatherappkuliza/viewmodel/ForecastListViewModel.kt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/res/drawable/circular_spinner.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/titas/weatherappkuliza/adapter/ForecastListAdapter.kt" afterPath="$PROJECT_DIR$/src/main/java/com/titas/weatherappkuliza/adapter/ForecastListAdapter.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/titas/weatherappkuliza/common/Extensions.kt" afterPath="$PROJECT_DIR$/src/main/java/com/titas/weatherappkuliza/common/Extensions.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/titas/weatherappkuliza/model/Models.kt" afterPath="$PROJECT_DIR$/src/main/java/com/titas/weatherappkuliza/model/Models.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/titas/weatherappkuliza/repository/WeatherRepository.kt" afterPath="$PROJECT_DIR$/src/main/java/com/titas/weatherappkuliza/repository/WeatherRepository.kt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/titas/weatherappkuliza/view/WeatherActivity.kt" afterPath="$PROJECT_DIR$/src/main/java/com/titas/weatherappkuliza/view/WeatherActivity.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/activity_weather.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_weather.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/forecast_row_item.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/forecast_row_item.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values-sw600dp/dimens.xml" afterPath="$PROJECT_DIR$/src/main/res/values-sw600dp/dimens.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values/dimens.xml" afterPath="$PROJECT_DIR$/src/main/res/values/dimens.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values/strings.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -72,7 +53,7 @@
       <file leaf-file-name="WeatherRepository.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/titas/weatherappkuliza/repository/WeatherRepository.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
+            <state relative-caret-position="243">
               <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding>
                 <element signature="e#47#416#0" expanded="true" />
@@ -122,7 +103,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ForecastListAdapter.kt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ForecastListAdapter.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/titas/weatherappkuliza/adapter/ForecastListAdapter.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="601">
@@ -152,8 +133,8 @@
       <file leaf-file-name="Extensions.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/titas/weatherappkuliza/common/Extensions.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+            <state relative-caret-position="201">
+              <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
               <folding>
                 <element signature="e#43#602#0" expanded="true" />
               </folding>
@@ -161,11 +142,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WeatherActivity.kt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="WeatherActivity.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/titas/weatherappkuliza/view/WeatherActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="98" column="0" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+            <state relative-caret-position="199">
+              <caret line="98" column="53" lean-forward="false" selection-start-line="98" selection-start-column="53" selection-end-line="98" selection-end-column="53" />
               <folding>
                 <element signature="e#41#1100#0" expanded="true" />
                 <element signature="e#2607#3003#0" expanded="false" />
@@ -2857,7 +2838,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1526146646093" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1526147307184" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2905,7 +2886,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1526146646093" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1526147307185" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -3088,7 +3069,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1526146646094" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1526147307186" />
       </method>
     </configuration>
     <list size="1">
@@ -3138,7 +3119,7 @@
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39909297" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39909297" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -3239,7 +3220,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/titas/weatherappkuliza/view/WeatherActivity.kt</url>
-          <line>98</line>
+          <line>100</line>
           <properties />
           <option name="timeStamp" value="16" />
         </line-breakpoint>
@@ -3249,8 +3230,44 @@
           <properties />
           <option name="timeStamp" value="17" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/titas/weatherappkuliza/view/WeatherActivity.kt</url>
+          <line>123</line>
+          <properties />
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/titas/weatherappkuliza/view/WeatherActivity.kt</url>
+          <line>124</line>
+          <properties />
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/titas/weatherappkuliza/view/WeatherActivity.kt</url>
+          <line>47</line>
+          <properties />
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/titas/weatherappkuliza/view/WeatherActivity.kt</url>
+          <line>48</line>
+          <properties />
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/titas/weatherappkuliza/view/WeatherActivity.kt</url>
+          <line>54</line>
+          <properties />
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/titas/weatherappkuliza/view/WeatherActivity.kt</url>
+          <line>92</line>
+          <properties />
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="18" />
+      <option name="time" value="25" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="app">
@@ -3661,6 +3678,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/titas/weatherappkuliza/adapter/ForecastListAdapter.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="601">
+          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding>
+            <element signature="e#44#611#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/titas/weatherappkuliza/model/ForecastWrapper.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -3671,7 +3698,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/titas/weatherappkuliza/repository/WeatherRepository.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
+        <state relative-caret-position="243">
           <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding>
             <element signature="e#47#416#0" expanded="true" />
@@ -3679,33 +3706,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/titas/weatherappkuliza/view/WeatherActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="98" column="0" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
-          <folding>
-            <element signature="e#41#1100#0" expanded="true" />
-            <element signature="e#2607#3003#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/titas/weatherappkuliza/common/Extensions.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+        <state relative-caret-position="201">
+          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
           <folding>
             <element signature="e#43#602#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/titas/weatherappkuliza/adapter/ForecastListAdapter.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/titas/weatherappkuliza/view/WeatherActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="601">
-          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+        <state relative-caret-position="199">
+          <caret line="98" column="53" lean-forward="false" selection-start-line="98" selection-start-column="53" selection-end-line="98" selection-end-column="53" />
           <folding>
-            <element signature="e#44#611#0" expanded="true" />
+            <element signature="e#41#1100#0" expanded="true" />
+            <element signature="e#2607#3003#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -85,6 +85,7 @@ class WeatherActivity : AppCompatActivity() {
 
     private fun showProgress(){
         progress_container.visibility = View.VISIBLE
+        progress_container.alpha = 1.0f
     }
 
     private fun initForecastScreen(forecastData: ForecastWrapper?){
@@ -95,6 +96,7 @@ class WeatherActivity : AppCompatActivity() {
             forecastListAdapter = ForecastListAdapter(forecastData.forecastList)
             forecast_list.adapter = forecastListAdapter
             success_path_container.visibility = View.VISIBLE
+            forecast_list.visibility = View.INVISIBLE
             //animate list from below
             slideUp()
         }
