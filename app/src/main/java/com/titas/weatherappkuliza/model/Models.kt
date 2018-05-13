@@ -187,12 +187,10 @@ data class Error(@SerializedName("message") val errorMessage: String) : Parcelab
 
 data class WeatherResponse(@SerializedName("location") val location:Location,
                            @SerializedName("current") val current: Current,
-                           @SerializedName("forecast") val forecast: Forecast,
-                           @SerializedName("error") val error: Error) : Parcelable {
+                           @SerializedName("forecast") val forecast: Forecast) : Parcelable {
     constructor(parcel: Parcel) : this(
             parcel.readParcelable(Location::class.java.classLoader),
             parcel.readParcelable(Forecast::class.java.classLoader),
-            parcel.readParcelable(Error::class.java.classLoader),
             parcel.readParcelable(Current::class.java.classLoader)) {
     }
 
@@ -200,7 +198,6 @@ data class WeatherResponse(@SerializedName("location") val location:Location,
         parcel.writeParcelable(location, flags)
         parcel.writeParcelable(current, flags)
         parcel.writeParcelable(forecast, flags)
-        parcel.writeParcelable(error, flags)
     }
 
     override fun describeContents(): Int {

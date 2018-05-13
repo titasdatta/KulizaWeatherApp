@@ -21,8 +21,6 @@ import android.util.Log
 import android.view.View
 import android.view.animation.AccelerateDecelerateInterpolator
 import android.view.animation.TranslateAnimation
-import com.google.android.gms.location.FusedLocationProviderClient
-import com.google.android.gms.location.LocationServices
 import com.titas.weatherappkuliza.R
 import com.titas.weatherappkuliza.adapter.ForecastListAdapter
 import com.titas.weatherappkuliza.common.Constants.Companion.LOCATION_REFRESH_DISTANCE

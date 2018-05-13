@@ -41,10 +41,14 @@ class Utils @Inject constructor(private val context: Context) {
                 (tomorrowsDate.get(Calendar.DAY_OF_MONTH) == dateToBeValidated.get(Calendar.DAY_OF_MONTH)))
     }
 
+    fun isToday(dateTime: Long): Boolean{
+        return DateUtils.isToday(dateTime)
+    }
+
     fun getFormattedDateFor(dateString: String): String{
         var simpleDateFormat = SimpleDateFormat("yyyy-MM-dd")
         val date = simpleDateFormat.parse(dateString)
-        if(DateUtils.isToday(date.time)) return "Today"
+        if(isToday(date.time)) return "Today"
         else if(isTomorrowsDate(date)) return "Tomorrow"
         else {
             simpleDateFormat = SimpleDateFormat("dd MMM yyyy")
