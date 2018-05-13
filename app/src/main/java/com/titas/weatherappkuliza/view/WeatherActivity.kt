@@ -18,16 +18,17 @@ import com.titas.weatherappkuliza.common.Utils
 import com.titas.weatherappkuliza.dagger.WeatherApplication
 import com.titas.weatherappkuliza.model.ForecastWrapper
 import com.titas.weatherappkuliza.model.StatusCode
+import com.titas.weatherappkuliza.model.WeatherForecast
 import com.titas.weatherappkuliza.viewmodel.ForecastListViewModel
-import dagger.android.AndroidInjection
 import kotlinx.android.synthetic.main.activity_weather.*
 import javax.inject.Inject
 
 class WeatherActivity : AppCompatActivity() {
 
     lateinit var weatherResponseLiveData : LiveData<ForecastWrapper>
-    lateinit var forecastListAdapter: ForecastListAdapter
+    var forecastListAdapter: ForecastListAdapter? = null
     lateinit var forecastViewModel: ForecastListViewModel
+    var forecastList: ArrayList<WeatherForecast> = arrayListOf()
     @Inject
     lateinit var utils: Utils
     @Inject
@@ -53,7 +54,7 @@ class WeatherActivity : AppCompatActivity() {
                 hideProgress()
                 if(weatherResponse != null && weatherResponse.status == StatusCode.OK){
                     //success path
-                    initForecastScreen(weatherResponse)
+                    updateForecastScreen(weatherResponse)
                 }else{
                     //failure path
                     showFailureScreen()
@@ -92,17 +93,23 @@ class WeatherActivity : AppCompatActivity() {
         progress_container.alpha = 1.0f
     }
 
-    private fun initForecastScreen(forecastData: ForecastWrapper?){
+    private fun updateForecastScreen(forecastData: ForecastWrapper?){
         forecastData?.let {
             val currentTemp = "${forecastData.currentTemp}" + "\u00B0"
             current_temp.text = "${currentTemp}"
             current_location.text = "${forecastData.city}"
-            forecastListAdapter = ForecastListAdapter(forecastData.forecastList, utils)
-            forecast_list.adapter = forecastListAdapter
+            forecastList.clear()
+            forecastList.addAll(forecastData.forecastList)
             success_path_container.visibility = View.VISIBLE
-            forecast_list.visibility = View.INVISIBLE
-            //animate list from below
-            slideUp()
+            if(forecastListAdapter == null) {
+                forecastListAdapter = ForecastListAdapter(forecastList, utils)
+                forecast_list.adapter = forecastListAdapter
+                forecast_list.visibility = View.INVISIBLE
+                //animate list from below
+                slideUp()
+            }else{
+                forecastListAdapter?.notifyDataSetChanged()
+            }
         }
     }
 
