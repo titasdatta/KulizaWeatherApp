@@ -1,6 +1,7 @@
 package com.titas.weatherappkuliza.common
 
 import android.content.Context
+import android.location.LocationManager
 import android.net.ConnectivityManager
 import android.net.NetworkInfo
 import android.text.format.DateUtils
@@ -14,6 +15,9 @@ import javax.inject.Singleton
  */
 @Singleton
 class Utils @Inject constructor(private val context: Context) {
+    val locationManager: LocationManager by lazy {
+        context.getSystemService(Context.LOCATION_SERVICE) as LocationManager
+    }
 
     fun getWeatherCondition(conditionDesc: String): String {
         if(conditionDesc.split(" ").size == 1){

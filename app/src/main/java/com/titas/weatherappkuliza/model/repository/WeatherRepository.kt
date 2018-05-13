@@ -18,8 +18,8 @@ import javax.inject.Singleton
 open class WeatherRepository @Inject constructor(val weatherService: WeatherService) {
     val weatherResponseData: MutableLiveData<ForecastWrapper> = MutableLiveData<ForecastWrapper>()
 
-    fun getWeatherData(key: String, city: String, noOfDays: Int): LiveData<ForecastWrapper> {
-        val call: Call<WeatherResponse> = weatherService.getWeather(key, city, noOfDays)
+    fun getWeather(key: String, queryString: String, noOfDays: Int) {
+        val call: Call<WeatherResponse> = weatherService.getWeather(key, queryString, noOfDays)
         call.enqueue(object : Callback<WeatherResponse> {
             override fun onFailure(call: Call<WeatherResponse>?, t: Throwable?) {
                 val forecastWrapper = ForecastWrapper(null)
@@ -32,8 +32,9 @@ open class WeatherRepository @Inject constructor(val weatherService: WeatherServ
 
             }
         })
-
-        return weatherResponseData
     }
 
+    fun getWeatherObservable(): LiveData<ForecastWrapper>{
+        return weatherResponseData
+    }
 }

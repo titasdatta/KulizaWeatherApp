@@ -1,7 +1,9 @@
 package com.titas.weatherappkuliza.viewmodel
 
+import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.ViewModel
 import com.titas.weatherappkuliza.common.Constants
+import com.titas.weatherappkuliza.model.ForecastWrapper
 import com.titas.weatherappkuliza.model.repository.WeatherRepository
 import javax.inject.Inject
 
@@ -10,7 +12,15 @@ import javax.inject.Inject
  */
 class ForecastListViewModel @Inject constructor(private val repository: WeatherRepository): ViewModel() {
 
-    fun getWeather(city: String) = repository.getWeatherData(Constants.API_KEY, city, 7)
+    private var forecastData: LiveData<ForecastWrapper>
 
+    init {
+        forecastData = repository.getWeatherObservable()
+    }
 
+    fun getWeather(queryString: String) = repository.getWeather(Constants.API_KEY, queryString, 7)
+
+    fun getWeatherObservable(): LiveData<ForecastWrapper>{
+        return forecastData
+    }
 }
